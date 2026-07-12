@@ -1,25 +1,51 @@
 # Benchmark Plan
 
-## Mục tiêu
+## Objective
 
-Đánh giá hiệu năng và chất lượng của từng mô hình AI.
+So sánh chất lượng và hiệu năng giữa các mô hình AI Upscale.
+
+---
 
 ## Dataset
+
+Ảnh sẽ được chia thành
 
 - Portrait
 - Landscape
 - Anime
 - Text
 - Low-light
+- Noisy
 
-## Metrics
+---
 
-- Thời gian xử lý
+## Evaluation Metrics
+
+### Performance
+
+- Inference Time
+- GPU Usage
 - VRAM
+
+### Quality
+
 - PSNR
 - SSIM
-- Đánh giá trực quan
 
-## Trạng thái
+### Visual
+
+Đánh giá bằng mắt
+
+- Sharpness
+- Detail
+- Artifact
+- Noise
+
+---
+
+## Benchmark Result
+
+| Model | Time | VRAM | PSNR | SSIM | Rating |
+|---------|------|------|-------|-------|---------|
 
 Chưa thực hiện.
