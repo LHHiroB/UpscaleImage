@@ -1,5 +1,9 @@
 # Day 02 Report
 
+**Project:** UpscaleImage  
+**Date:** 2026-07-13  
+**Phase:** Surveying existing AI upscaling models.
+
 ## Objective
 
 Khảo sát các mô hình AI Upscale hiện có và lựa chọn các ứng viên phù hợp để benchmark.

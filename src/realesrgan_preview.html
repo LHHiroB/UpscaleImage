@@ -392,9 +392,9 @@
             <div class="badge">${entry.index < 10 ? '0' + entry.index : entry.index}</div>
           </div>
           <div class="compare" data-card="${entry.index}">
-            <img class="before-layer" src="${entry.input_data_url}" alt="Input ${entry.name}" />
+            <img class="before-layer" src="${entry.input_url}" alt="Input ${entry.name}" />
             <div class="top-layer">
-              <img class="after-layer" src="${entry.output_data_url}" alt="Output ${entry.name}" />
+              <img class="after-layer" src="${entry.output_url}" alt="Output ${entry.name}" />
             </div>
             <div class="label before">Before</div>
             <div class="label after">After</div>
@@ -476,4 +476,3 @@
   </script>
 </body>
 </html>
-

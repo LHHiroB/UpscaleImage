@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import argparse
-import base64
 import json
 import statistics
 import sys
@@ -62,26 +61,16 @@ def path_or_str(path: Path, start: Path) -> str:
         return str(path)
 
 
+def file_uri(path: Path) -> str:
+    return path.resolve().as_uri()
+
+
 def default_input_dir() -> Path:
-    return repo_root() / "datasets" / "input"
+    return repo_root() / "datasets" / "inputs"
 
 
 def default_output_dir() -> Path:
     return repo_root() / "output" / "realesrgan"
-
-
-def read_binary_data_url(path: Path) -> str:
-    mime = {
-        ".jpg": "image/jpeg",
-        ".jpeg": "image/jpeg",
-        ".png": "image/png",
-        ".webp": "image/webp",
-        ".bmp": "image/bmp",
-        ".tif": "image/tiff",
-        ".tiff": "image/tiff",
-    }.get(path.suffix.lower(), "application/octet-stream")
-    payload = base64.b64encode(path.read_bytes()).decode("ascii")
-    return f"data:{mime};base64,{payload}"
 
 
 def collect_images(input_dir: Path, limit: int) -> list[Path]:
@@ -110,6 +99,15 @@ def run_benchmark(args: argparse.Namespace) -> int:
     try:
         import cv2
         import torch
+        import torchvision.transforms.functional as tv_functional
+        import types
+
+        if "torchvision.transforms.functional_tensor" not in sys.modules:
+            shim = types.ModuleType("torchvision.transforms.functional_tensor")
+            for name in dir(tv_functional):
+                setattr(shim, name, getattr(tv_functional, name))
+            sys.modules["torchvision.transforms.functional_tensor"] = shim
+
         from basicsr.archs.rrdbnet_arch import RRDBNet
         from realesrgan import RealESRGANer
     except Exception as exc:  # pragma: no cover - import guard
@@ -212,11 +210,11 @@ def run_benchmark(args: argparse.Namespace) -> int:
             "name": image_path.name,
             "input_path": path_or_str(image_path, project_root),
             "output_path": path_or_str(output_path, project_root),
+            "input_url": file_uri(image_path),
+            "output_url": file_uri(output_path),
             "input_size": [before_w, before_h],
             "output_size": [after_w, after_h],
             "elapsed_ms": round(elapsed_ms, 3),
-            "input_data_url": read_binary_data_url(image_path),
-            "output_data_url": read_binary_data_url(output_path),
         }
         entries.append(entry)
 
