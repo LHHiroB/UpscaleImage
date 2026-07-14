@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real-ESRGAN Index</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Aptos", sans-serif;
+      background: #07101f;
+      color: #eef2ff;
+    }
+    .shell { width: min(1320px, calc(100vw - 28px)); margin: 0 auto; padding: 20px 0 32px; }
+    .hero, .card {
+      background: rgba(17, 24, 45, 0.92);
+      border: 1px solid rgba(145, 167, 255, 0.18);
+      border-radius: 18px;
+      box-shadow: 0 24px 90px rgba(0,0,0,.35);
+    }
+    .hero { padding: 20px 22px; margin-bottom: 16px; }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 46px); }
+    .muted { color: #a8b3d7; line-height: 1.55; }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .stat { padding: 14px; background: rgba(25,34,61,.9); border-radius: 16px; border: 1px solid rgba(145,167,255,.16); }
+    .stat .label { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: #a8b3d7; margin-bottom: 6px; }
+    .stat .value { font-size: 20px; font-weight: 800; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+    a.card { color: inherit; text-decoration: none; padding: 14px; }
+    .card-head { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+    .title { font-weight: 800; line-height: 1.3; }
+    .meta { color: #a8b3d7; font-size: 13px; margin-top: 4px; word-break: break-all; }
+    .badge { padding: 6px 10px; border-radius: 999px; background: rgba(104,214,255,.14); color: #68d6ff; font-size: 12px; font-weight: 800; white-space: nowrap; height: fit-content; }
+    .row { display: flex; justify-content: space-between; gap: 10px; margin-top: 8px; color: #a8b3d7; font-size: 13px; }
+    @media (max-width: 980px) { .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 640px) { .summary { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <h1>Real-ESRGAN previews</h1>
+      <p class="muted">
+        Click any image card below to open a dedicated page where the original is on the left,
+        the upscaled result is on the right, and benchmark info is shown for that specific image.
+      </p>
+    </section>
+
+    <section class="summary">
+      <div class="stat"><div class="label">Images</div><div class="value">20</div></div>
+      <div class="stat"><div class="label">Model</div><div class="value">RealESRGAN_x4plus</div></div>
+      <div class="stat"><div class="label">Device</div><div class="value">cuda</div></div>
+      <div class="stat"><div class="label">Peak VRAM</div><div class="value">2846.0 MB</div></div>
+    </section>
+
+    <section class="grid">
+      
+            <a class="card" href="pages/image-01-1.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">1. 1.jpg</div>
+                  <div class="meta">datasets\inputs\1.jpg</div>
+                </div>
+                <div class="badge">6150.87 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>1200 x 675</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>4800 x 2700</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-02-10.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">2. 10.jpg</div>
+                  <div class="meta">datasets\inputs\10.jpg</div>
+                </div>
+                <div class="badge">5134.85 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>1200 x 675</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>4800 x 2700</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-03-11.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">3. 11.jpg</div>
+                  <div class="meta">datasets\inputs\11.jpg</div>
+                </div>
+                <div class="badge">4684.91 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>648 x 1152</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>2592 x 4608</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-04-12.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">4. 12.jpg</div>
+                  <div class="meta">datasets\inputs\12.jpg</div>
+                </div>
+                <div class="badge">10444.55 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>1000 x 1500</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>4000 x 6000</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-05-13.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">5. 13.jpg</div>
+                  <div class="meta">datasets\inputs\13.jpg</div>
+                </div>
+                <div class="badge">1960.82 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>380 x 675</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>1520 x 2700</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-06-14.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">6. 14.jpg</div>
+                  <div class="meta">datasets\inputs\14.jpg</div>
+                </div>
+                <div class="badge">14948.51 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>1086 x 1932</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>4344 x 7728</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-07-15.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">7. 15.jpg</div>
+                  <div class="meta">datasets\inputs\15.jpg</div>
+                </div>
+                <div class="badge">9411.10 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>851 x 1512</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>3404 x 6048</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-08-16.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">8. 16.jpg</div>
+                  <div class="meta">datasets\inputs\16.jpg</div>
+                </div>
+                <div class="badge">3896.24 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>563 x 1000</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>2252 x 4000</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-09-17.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">9. 17.jpg</div>
+                  <div class="meta">datasets\inputs\17.jpg</div>
+                </div>
+                <div class="badge">18237.98 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>1200 x 2133</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>4800 x 8532</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-10-18.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">10. 18.jpg</div>
+                  <div class="meta">datasets\inputs\18.jpg</div>
+                </div>
+                <div class="badge">18860.51 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>1200 x 2133</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>4800 x 8532</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-11-19.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">11. 19.jpg</div>
+                  <div class="meta">datasets\inputs\19.jpg</div>
+                </div>
+                <div class="badge">10427.38 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>878 x 1560</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>3512 x 6240</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-12-2.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">12. 2.jpg</div>
+                  <div class="meta">datasets\inputs\2.jpg</div>
+                </div>
+                <div class="badge">5613.30 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>1200 x 675</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>4800 x 2700</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-13-20.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">13. 20.jpg</div>
+                  <div class="meta">datasets\inputs\20.jpg</div>
+                </div>
+                <div class="badge">8154.65 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>803 x 1428</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>3212 x 5712</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-14-3.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">14. 3.jpg</div>
+                  <div class="meta">datasets\inputs\3.jpg</div>
+                </div>
+                <div class="badge">5555.62 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>1200 x 675</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>4800 x 2700</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-15-4.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">15. 4.jpg</div>
+                  <div class="meta">datasets\inputs\4.jpg</div>
+                </div>
+                <div class="badge">5534.97 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>1200 x 675</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>4800 x 2700</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-16-5.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">16. 5.jpg</div>
+                  <div class="meta">datasets\inputs\5.jpg</div>
+                </div>
+                <div class="badge">5757.93 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>1200 x 675</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>4800 x 2700</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-17-6.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">17. 6.jpg</div>
+                  <div class="meta">datasets\inputs\6.jpg</div>
+                </div>
+                <div class="badge">5759.82 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>1200 x 675</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>4800 x 2700</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-18-7.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">18. 7.jpg</div>
+                  <div class="meta">datasets\inputs\7.jpg</div>
+                </div>
+                <div class="badge">5847.58 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>1200 x 675</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>4800 x 2700</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-19-8.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">19. 8.jpg</div>
+                  <div class="meta">datasets\inputs\8.jpg</div>
+                </div>
+                <div class="badge">5914.93 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>1200 x 675</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>4800 x 2700</span>
+              </div>
+            </a>
+            
+            <a class="card" href="pages/image-20-9.jpg.html">
+              <div class="card-head">
+                <div>
+                  <div class="title">20. 9.jpg</div>
+                  <div class="meta">datasets\inputs\9.jpg</div>
+                </div>
+                <div class="badge">5926.93 ms</div>
+              </div>
+              <div class="row">
+                <span>Original</span>
+                <span>1200 x 675</span>
+              </div>
+              <div class="row">
+                <span>Upscaled</span>
+                <span>4800 x 2700</span>
+              </div>
+            </a>
+            
+    </section>
+  </main>
+</body>
+</html>

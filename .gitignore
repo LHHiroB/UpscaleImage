@@ -22,9 +22,9 @@ dist/
 # Logs
 *.log
 
-# Output
-output/
-outputs/
+# # Output
+# output/
+# outputs/
 
 # # AI Models
 # models/

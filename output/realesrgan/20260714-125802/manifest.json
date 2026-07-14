@@ -1,0 +1,402 @@
+{
+  "summary": {
+    "project": "UpscaleImage",
+    "model_key": "x4plus",
+    "model_name": "RealESRGAN_x4plus",
+    "device": "cuda",
+    "half_precision": true,
+    "tile": 256,
+    "tile_pad": 10,
+    "pre_pad": 0,
+    "outscale": 4,
+    "input_dir": "F:\\HiroB\\Tong\\UpscaleImage\\datasets\\inputs",
+    "output_dir": "output\\realesrgan\\20260714-125802",
+    "image_count": 20,
+    "avg_ms": 7911.173,
+    "min_ms": 1960.823,
+    "max_ms": 18860.508,
+    "peak_vram_mb": 2846.0
+  },
+  "entries": [
+    {
+      "index": 1,
+      "name": "1.jpg",
+      "input_path": "datasets\\inputs\\1.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\1_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/1.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/1_x4plus_x4.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 6150.869,
+      "input_name": "1.jpg",
+      "page_name": "pages/image-01-1.jpg.html"
+    },
+    {
+      "index": 2,
+      "name": "10.jpg",
+      "input_path": "datasets\\inputs\\10.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\10_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/10.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/10_x4plus_x4.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 5134.85,
+      "input_name": "10.jpg",
+      "page_name": "pages/image-02-10.jpg.html"
+    },
+    {
+      "index": 3,
+      "name": "11.jpg",
+      "input_path": "datasets\\inputs\\11.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\11_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/11.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/11_x4plus_x4.png",
+      "input_size": [
+        648,
+        1152
+      ],
+      "output_size": [
+        2592,
+        4608
+      ],
+      "elapsed_ms": 4684.912,
+      "input_name": "11.jpg",
+      "page_name": "pages/image-03-11.jpg.html"
+    },
+    {
+      "index": 4,
+      "name": "12.jpg",
+      "input_path": "datasets\\inputs\\12.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\12_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/12.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/12_x4plus_x4.png",
+      "input_size": [
+        1000,
+        1500
+      ],
+      "output_size": [
+        4000,
+        6000
+      ],
+      "elapsed_ms": 10444.547,
+      "input_name": "12.jpg",
+      "page_name": "pages/image-04-12.jpg.html"
+    },
+    {
+      "index": 5,
+      "name": "13.jpg",
+      "input_path": "datasets\\inputs\\13.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\13_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/13.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/13_x4plus_x4.png",
+      "input_size": [
+        380,
+        675
+      ],
+      "output_size": [
+        1520,
+        2700
+      ],
+      "elapsed_ms": 1960.823,
+      "input_name": "13.jpg",
+      "page_name": "pages/image-05-13.jpg.html"
+    },
+    {
+      "index": 6,
+      "name": "14.jpg",
+      "input_path": "datasets\\inputs\\14.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\14_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/14.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/14_x4plus_x4.png",
+      "input_size": [
+        1086,
+        1932
+      ],
+      "output_size": [
+        4344,
+        7728
+      ],
+      "elapsed_ms": 14948.512,
+      "input_name": "14.jpg",
+      "page_name": "pages/image-06-14.jpg.html"
+    },
+    {
+      "index": 7,
+      "name": "15.jpg",
+      "input_path": "datasets\\inputs\\15.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\15_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/15.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/15_x4plus_x4.png",
+      "input_size": [
+        851,
+        1512
+      ],
+      "output_size": [
+        3404,
+        6048
+      ],
+      "elapsed_ms": 9411.097,
+      "input_name": "15.jpg",
+      "page_name": "pages/image-07-15.jpg.html"
+    },
+    {
+      "index": 8,
+      "name": "16.jpg",
+      "input_path": "datasets\\inputs\\16.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\16_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/16.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/16_x4plus_x4.png",
+      "input_size": [
+        563,
+        1000
+      ],
+      "output_size": [
+        2252,
+        4000
+      ],
+      "elapsed_ms": 3896.236,
+      "input_name": "16.jpg",
+      "page_name": "pages/image-08-16.jpg.html"
+    },
+    {
+      "index": 9,
+      "name": "17.jpg",
+      "input_path": "datasets\\inputs\\17.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\17_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/17.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/17_x4plus_x4.png",
+      "input_size": [
+        1200,
+        2133
+      ],
+      "output_size": [
+        4800,
+        8532
+      ],
+      "elapsed_ms": 18237.983,
+      "input_name": "17.jpg",
+      "page_name": "pages/image-09-17.jpg.html"
+    },
+    {
+      "index": 10,
+      "name": "18.jpg",
+      "input_path": "datasets\\inputs\\18.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\18_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/18.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/18_x4plus_x4.png",
+      "input_size": [
+        1200,
+        2133
+      ],
+      "output_size": [
+        4800,
+        8532
+      ],
+      "elapsed_ms": 18860.508,
+      "input_name": "18.jpg",
+      "page_name": "pages/image-10-18.jpg.html"
+    },
+    {
+      "index": 11,
+      "name": "19.jpg",
+      "input_path": "datasets\\inputs\\19.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\19_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/19.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/19_x4plus_x4.png",
+      "input_size": [
+        878,
+        1560
+      ],
+      "output_size": [
+        3512,
+        6240
+      ],
+      "elapsed_ms": 10427.382,
+      "input_name": "19.jpg",
+      "page_name": "pages/image-11-19.jpg.html"
+    },
+    {
+      "index": 12,
+      "name": "2.jpg",
+      "input_path": "datasets\\inputs\\2.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\2_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/2.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/2_x4plus_x4.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 5613.296,
+      "input_name": "2.jpg",
+      "page_name": "pages/image-12-2.jpg.html"
+    },
+    {
+      "index": 13,
+      "name": "20.jpg",
+      "input_path": "datasets\\inputs\\20.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\20_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/20.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/20_x4plus_x4.png",
+      "input_size": [
+        803,
+        1428
+      ],
+      "output_size": [
+        3212,
+        5712
+      ],
+      "elapsed_ms": 8154.655,
+      "input_name": "20.jpg",
+      "page_name": "pages/image-13-20.jpg.html"
+    },
+    {
+      "index": 14,
+      "name": "3.jpg",
+      "input_path": "datasets\\inputs\\3.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\3_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/3.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/3_x4plus_x4.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 5555.619,
+      "input_name": "3.jpg",
+      "page_name": "pages/image-14-3.jpg.html"
+    },
+    {
+      "index": 15,
+      "name": "4.jpg",
+      "input_path": "datasets\\inputs\\4.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\4_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/4.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/4_x4plus_x4.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 5534.969,
+      "input_name": "4.jpg",
+      "page_name": "pages/image-15-4.jpg.html"
+    },
+    {
+      "index": 16,
+      "name": "5.jpg",
+      "input_path": "datasets\\inputs\\5.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\5_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/5.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/5_x4plus_x4.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 5757.933,
+      "input_name": "5.jpg",
+      "page_name": "pages/image-16-5.jpg.html"
+    },
+    {
+      "index": 17,
+      "name": "6.jpg",
+      "input_path": "datasets\\inputs\\6.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\6_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/6.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/6_x4plus_x4.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 5759.823,
+      "input_name": "6.jpg",
+      "page_name": "pages/image-17-6.jpg.html"
+    },
+    {
+      "index": 18,
+      "name": "7.jpg",
+      "input_path": "datasets\\inputs\\7.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\7_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/7.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/7_x4plus_x4.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 5847.584,
+      "input_name": "7.jpg",
+      "page_name": "pages/image-18-7.jpg.html"
+    },
+    {
+      "index": 19,
+      "name": "8.jpg",
+      "input_path": "datasets\\inputs\\8.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\8_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/8.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/8_x4plus_x4.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 5914.927,
+      "input_name": "8.jpg",
+      "page_name": "pages/image-19-8.jpg.html"
+    },
+    {
+      "index": 20,
+      "name": "9.jpg",
+      "input_path": "datasets\\inputs\\9.jpg",
+      "output_path": "output\\realesrgan\\20260714-125802\\outputs\\9_x4plus_x4.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/9.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/9_x4plus_x4.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 5926.928,
+      "input_name": "9.jpg",
+      "page_name": "pages/image-20-9.jpg.html"
+    }
+  ]
+}

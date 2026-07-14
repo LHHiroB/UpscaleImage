@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real-ESRGAN Single Preview</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08101d;
+      --panel: rgba(17, 24, 45, 0.9);
+      --panel-2: rgba(25, 34, 61, 0.88);
+      --text: #eef2ff;
+      --muted: #a8b3d7;
+      --accent: #68d6ff;
+      --accent-2: #8cffc1;
+      --border: rgba(145, 167, 255, 0.18);
+      --shadow: 0 24px 90px rgba(0, 0, 0, 0.45);
+      --radius: 20px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: "Segoe UI", "Aptos", "Trebuchet MS", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(104, 214, 255, 0.18), transparent 28%),
+        radial-gradient(circle at top right, rgba(140, 255, 193, 0.16), transparent 24%),
+        linear-gradient(180deg, #07101f 0%, #0b1124 52%, #080c18 100%);
+    }
+
+    .shell {
+      width: min(1480px, calc(100vw - 28px));
+      margin: 0 auto;
+      padding: 18px 0 32px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .crumb {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .crumb a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(20, 28, 52, 0.95), rgba(12, 17, 35, 0.92));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backdrop-filter: blur(16px);
+    }
+
+    .hero {
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(26px, 3vw, 42px);
+      line-height: 1.05;
+    }
+
+    .lede {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.8fr) minmax(320px, 0.8fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .viewer {
+      padding: 16px;
+    }
+
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .shot {
+      background: #050916;
+      border: 1px solid rgba(145, 167, 255, 0.16);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .shot-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(145, 167, 255, 0.14);
+      background: rgba(255, 255, 255, 0.03);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .shot-title {
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: min(74vh, 900px);
+      object-fit: contain;
+      background: #050916;
+    }
+
+    .meta {
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .stat {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+    }
+
+    .stat .label {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 6px;
+    }
+
+    .stat .value {
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .stat .sub {
+      color: var(--muted);
+      margin-top: 4px;
+      line-height: 1.45;
+      font-size: 13px;
+    }
+
+    .block {
+      margin-top: 14px;
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 14px;
+    }
+
+    .block h2 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+
+    .block + .block {
+      margin-top: 12px;
+    }
+
+    .kv {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px 12px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .kv div:nth-child(odd) {
+      color: var(--muted);
+    }
+
+    .kv div:nth-child(even) {
+      text-align: right;
+      font-weight: 700;
+    }
+
+    .backlink {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    @media (max-width: 980px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .compare {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="topbar">
+      <div class="crumb"><a href="../preview.html">Back to index</a></div>
+      <a class="backlink" href="../preview.html">Open image index</a>
+    </div>
+
+    <section class="panel hero">
+      <h1 id="title">Real-ESRGAN single preview</h1>
+      <p class="lede" id="subtitle"></p>
+    </section>
+
+    <section class="layout">
+      <article class="panel viewer">
+        <div class="compare">
+          <section class="shot">
+            <div class="shot-head">
+              <span class="shot-title">Original</span>
+              <span id="inputSizeLabel"></span>
+            </div>
+            <img id="inputImage" alt="Original image" />
+          </section>
+          <section class="shot">
+            <div class="shot-head">
+              <span class="shot-title">Upscaled</span>
+              <span id="outputSizeLabel"></span>
+            </div>
+            <img id="outputImage" alt="Upscaled image" />
+          </section>
+        </div>
+      </article>
+
+    <aside class="panel meta">
+        <div class="stat">
+          <span class="label">Image</span>
+          <div class="value" id="imageName">-</div>
+          <div class="sub" id="imagePaths"></div>
+        </div>
+        <div class="stat">
+          <span class="label">Benchmark time</span>
+          <div class="value" id="elapsedMs">-</div>
+          <div class="sub" id="scaleInfo"></div>
+        </div>
+        <div class="stat">
+          <span class="label">Environment</span>
+          <div class="value" id="deviceInfo">-</div>
+          <div class="sub" id="vramInfo"></div>
+        </div>
+
+        <div class="block">
+          <h2>Image stats</h2>
+          <div class="kv" id="summaryKv"></div>
+        </div>
+
+        <div class="block">
+          <h2>Benchmark details</h2>
+          <div class="kv" id="benchmarkKv"></div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script id="page-data" type="application/json">{"summary": {"project": "UpscaleImage", "model_key": "x4plus", "model_name": "RealESRGAN_x4plus", "device": "cuda", "half_precision": true, "tile": 256, "tile_pad": 10, "pre_pad": 0, "outscale": 4, "input_dir": "F:\\HiroB\\Tong\\UpscaleImage\\datasets\\inputs", "output_dir": "output\\realesrgan\\20260714-125802", "image_count": 20, "avg_ms": 7911.173, "min_ms": 1960.823, "max_ms": 18860.508, "peak_vram_mb": 2846.0}, "entry": {"index": 8, "name": "16.jpg", "input_path": "datasets\\inputs\\16.jpg", "output_path": "output\\realesrgan\\20260714-125802\\outputs\\16_x4plus_x4.png", "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/16.jpg", "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/realesrgan/20260714-125802/outputs/16_x4plus_x4.png", "input_size": [563, 1000], "output_size": [2252, 4000], "elapsed_ms": 3896.236, "input_name": "16.jpg", "page_name": "pages/image-08-16.jpg.html"}}</script>
+  <script>
+    const data = JSON.parse(document.getElementById('page-data').textContent);
+    const summary = data.summary || {};
+    const entry = data.entry || {};
+
+    function fmtMs(value) {
+      if (value === null || value === undefined) return 'n/a';
+      return `${Number(value).toFixed(2)} ms`;
+    }
+
+    function fmtSize(size) {
+      if (!Array.isArray(size) || size.length !== 2) return 'n/a';
+      return `${size[0]} x ${size[1]}`;
+    }
+
+    document.title = `Real-ESRGAN - ${entry.name || 'Preview'}`;
+    document.getElementById('title').textContent = entry.name || 'Real-ESRGAN single preview';
+    document.getElementById('subtitle').textContent = `Left: original. Right: upscaled. This page is generated for one image so you can judge it without scrolling through the whole batch.`;
+    document.getElementById('inputImage').src = entry.input_url || '';
+    document.getElementById('outputImage').src = entry.output_url || '';
+    document.getElementById('inputSizeLabel').textContent = fmtSize(entry.input_size);
+    document.getElementById('outputSizeLabel').textContent = fmtSize(entry.output_size);
+    document.getElementById('imageName').textContent = entry.name || '-';
+    document.getElementById('imagePaths').textContent = `${entry.input_path || ''} -> ${entry.output_path || ''}`;
+    document.getElementById('elapsedMs').textContent = fmtMs(entry.elapsed_ms);
+    document.getElementById('scaleInfo').textContent = `Model: ${summary.model_name || '-'} | Outscale: ${summary.outscale ?? '-'}`;
+    document.getElementById('deviceInfo').textContent = `${summary.device || '-'}${summary.half_precision ? ' / half' : ''}`;
+    document.getElementById('vramInfo').textContent = `Tile: ${summary.tile ?? '-'} | Peak VRAM: ${summary.peak_vram_mb ?? 'n/a'} MB`;
+
+    const summaryKv = document.getElementById('summaryKv');
+    const scaleFactor = entry.input_size && entry.output_size && entry.input_size.length === 2 && entry.output_size.length === 2
+      ? `${Math.round((entry.output_size[0] / entry.input_size[0]) * 100) / 100}x`
+      : 'n/a';
+    const imageRows = [
+      ['Input path', entry.input_path || 'n/a'],
+      ['Output path', entry.output_path || 'n/a'],
+      ['Input size', fmtSize(entry.input_size)],
+      ['Output size', fmtSize(entry.output_size)],
+      ['Scale factor', scaleFactor],
+      ['Timing', fmtMs(entry.elapsed_ms)],
+    ];
+    const benchmarkRows = [
+      ['Run folder', summary.output_dir || 'n/a'],
+      ['Input folder', summary.input_dir || 'n/a'],
+      ['Model key', summary.model_key || 'n/a'],
+      ['Model name', summary.model_name || 'n/a'],
+      ['Device', summary.device || 'n/a'],
+      ['Half precision', summary.half_precision ? 'true' : 'false'],
+      ['Tile', summary.tile ?? 'n/a'],
+      ['Tile pad', summary.tile_pad ?? 'n/a'],
+      ['Pre pad', summary.pre_pad ?? 'n/a'],
+      ['Outscale', summary.outscale ?? 'n/a'],
+      ['Peak VRAM', summary.peak_vram_mb !== undefined && summary.peak_vram_mb !== null ? `${summary.peak_vram_mb} MB` : 'n/a'],
+      ['Average time', fmtMs(summary.avg_ms)],
+      ['Fastest', fmtMs(summary.min_ms)],
+      ['Slowest', fmtMs(summary.max_ms)],
+      ['Image count', summary.image_count ?? 'n/a'],
+    ];
+    summaryKv.innerHTML = imageRows.map(([k, v]) => `<div>${k}</div><div>${v}</div>`).join('');
+    document.getElementById('benchmarkKv').innerHTML = benchmarkRows.map(([k, v]) => `<div>${k}</div><div>${v}</div>`).join('');
+  </script>
+</body>
+</html>
