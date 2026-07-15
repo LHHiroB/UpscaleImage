@@ -1,0 +1,355 @@
+{
+  "summary": {
+    "project": "UpscaleImage",
+    "model_key": "swinir_realsr_x4",
+    "weight_path": "models\\SwinIR\\swinir_realsr_x4.pth",
+    "device": "cuda",
+    "input_dir": "F:\\HiroB\\Tong\\UpscaleImage\\datasets\\inputs",
+    "output_dir": "output\\unified\\20260716-003307_swinir_realsr_x4",
+    "image_count": 20,
+    "avg_ms": 34228.272,
+    "peak_vram_mb": 4842.0
+  },
+  "entries": [
+    {
+      "index": 1,
+      "name": "1.jpg",
+      "input_path": "datasets\\inputs\\1.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\1_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/1.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/1_out.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 24088.324
+    },
+    {
+      "index": 2,
+      "name": "10.jpg",
+      "input_path": "datasets\\inputs\\10.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\10_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/10.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/10_out.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 23373.293
+    },
+    {
+      "index": 3,
+      "name": "11.jpg",
+      "input_path": "datasets\\inputs\\11.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\11_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/11.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/11_out.png",
+      "input_size": [
+        648,
+        1152
+      ],
+      "output_size": [
+        2592,
+        4608
+      ],
+      "elapsed_ms": 20572.922
+    },
+    {
+      "index": 4,
+      "name": "12.jpg",
+      "input_path": "datasets\\inputs\\12.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\12_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/12.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/12_out.png",
+      "input_size": [
+        1000,
+        1500
+      ],
+      "output_size": [
+        4000,
+        6000
+      ],
+      "elapsed_ms": 41071.531
+    },
+    {
+      "index": 5,
+      "name": "13.jpg",
+      "input_path": "datasets\\inputs\\13.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\13_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/13.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/13_out.png",
+      "input_size": [
+        380,
+        675
+      ],
+      "output_size": [
+        1520,
+        2700
+      ],
+      "elapsed_ms": 7782.81
+    },
+    {
+      "index": 6,
+      "name": "14.jpg",
+      "input_path": "datasets\\inputs\\14.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\14_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/14.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/14_out.png",
+      "input_size": [
+        1086,
+        1932
+      ],
+      "output_size": [
+        4344,
+        7728
+      ],
+      "elapsed_ms": 60692.631
+    },
+    {
+      "index": 7,
+      "name": "15.jpg",
+      "input_path": "datasets\\inputs\\15.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\15_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/15.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/15_out.png",
+      "input_size": [
+        851,
+        1512
+      ],
+      "output_size": [
+        3404,
+        6048
+      ],
+      "elapsed_ms": 38648.539
+    },
+    {
+      "index": 8,
+      "name": "16.jpg",
+      "input_path": "datasets\\inputs\\16.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\16_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/16.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/16_out.png",
+      "input_size": [
+        563,
+        1000
+      ],
+      "output_size": [
+        2252,
+        4000
+      ],
+      "elapsed_ms": 16356.582
+    },
+    {
+      "index": 9,
+      "name": "17.jpg",
+      "input_path": "datasets\\inputs\\17.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\17_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/17.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/17_out.png",
+      "input_size": [
+        1200,
+        2133
+      ],
+      "output_size": [
+        4800,
+        8532
+      ],
+      "elapsed_ms": 84517.274
+    },
+    {
+      "index": 10,
+      "name": "18.jpg",
+      "input_path": "datasets\\inputs\\18.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\18_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/18.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/18_out.png",
+      "input_size": [
+        1200,
+        2133
+      ],
+      "output_size": [
+        4800,
+        8532
+      ],
+      "elapsed_ms": 84204.755
+    },
+    {
+      "index": 11,
+      "name": "19.jpg",
+      "input_path": "datasets\\inputs\\19.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\19_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/19.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/19_out.png",
+      "input_size": [
+        878,
+        1560
+      ],
+      "output_size": [
+        3512,
+        6240
+      ],
+      "elapsed_ms": 46584.782
+    },
+    {
+      "index": 12,
+      "name": "2.jpg",
+      "input_path": "datasets\\inputs\\2.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\2_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/2.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/2_out.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 26252.912
+    },
+    {
+      "index": 13,
+      "name": "20.jpg",
+      "input_path": "datasets\\inputs\\20.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\20_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/20.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/20_out.png",
+      "input_size": [
+        803,
+        1428
+      ],
+      "output_size": [
+        3212,
+        5712
+      ],
+      "elapsed_ms": 39332.945
+    },
+    {
+      "index": 14,
+      "name": "3.jpg",
+      "input_path": "datasets\\inputs\\3.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\3_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/3.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/3_out.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 28697.735
+    },
+    {
+      "index": 15,
+      "name": "4.jpg",
+      "input_path": "datasets\\inputs\\4.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\4_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/4.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/4_out.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 23291.88
+    },
+    {
+      "index": 16,
+      "name": "5.jpg",
+      "input_path": "datasets\\inputs\\5.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\5_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/5.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/5_out.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 23273.523
+    },
+    {
+      "index": 17,
+      "name": "6.jpg",
+      "input_path": "datasets\\inputs\\6.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\6_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/6.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/6_out.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 24416.035
+    },
+    {
+      "index": 18,
+      "name": "7.jpg",
+      "input_path": "datasets\\inputs\\7.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\7_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/7.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/7_out.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 23859.609
+    },
+    {
+      "index": 19,
+      "name": "8.jpg",
+      "input_path": "datasets\\inputs\\8.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\8_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/8.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/8_out.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 23876.203
+    },
+    {
+      "index": 20,
+      "name": "9.jpg",
+      "input_path": "datasets\\inputs\\9.jpg",
+      "output_path": "output\\unified\\20260716-003307_swinir_realsr_x4\\outputs\\9_out.png",
+      "input_url": "file:///F:/HiroB/Tong/UpscaleImage/datasets/inputs/9.jpg",
+      "output_url": "file:///F:/HiroB/Tong/UpscaleImage/output/unified/20260716-003307_swinir_realsr_x4/outputs/9_out.png",
+      "input_size": [
+        1200,
+        675
+      ],
+      "output_size": [
+        4800,
+        2700
+      ],
+      "elapsed_ms": 23671.162
+    }
+  ]
+}
