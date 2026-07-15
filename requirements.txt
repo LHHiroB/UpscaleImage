@@ -8,4 +8,5 @@ realesrgan
 basicsr
 facexlib
 gfpgan
-
+spandrel
+requests
