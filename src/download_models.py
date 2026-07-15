@@ -11,6 +11,10 @@ MODELS_TO_DOWNLOAD = {
     "HAT": {
         "url": "https://huggingface.co/AEmotionStudio/ai-upscale-models/resolve/main/Real_HAT_GAN_SRx4.pth",
         "path": "models/HAT/hat_realsr_x4.pth"
+    },
+    "RealESRGAN": {
+        "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth",
+        "path": "models/RealESRGAN/realesrgan_x4plus.pth"
     }
 }
 
