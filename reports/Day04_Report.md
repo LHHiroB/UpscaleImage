@@ -172,9 +172,3 @@ Dựa vào kinh nghiệm và bài học kỹ thuật từ Day 4, hệ thống In
 - **Tile Processor** tự động chia grid (256×256, pad=10) khi ảnh vượt ngưỡng.
 - Bọc forward pass trong `torch.no_grad()` + `torch.autocast` (khi phù hợp).
 - Hỗ trợ 3 chế độ: Fast / Balanced / Quality.
-
-### Nhiệm vụ cụ thể Day 5:
-1. Thiết kế class `UpscalePipeline` tại `src/pipelines/`.
-2. Tạo hàm `process_image(input_path, output_path, mode)` bao trọn chu trình.
-3. Viết CLI wrapper để gọi Pipeline từ dòng lệnh.
-4. Test Pipeline với 1 ảnh mẫu, đảm bảo cả 3 chế độ đều chạy đúng.
